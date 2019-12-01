@@ -12,7 +12,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--num-rows', default=10, type=int)
 parser.add_argument('--num-cols', default=10, type=int)
 parser.add_argument('--margin', default=0.5, type=float)
-parser.add_argument('--scale', default=4, type=float)
+parser.add_argument('--scale', default=1, type=float)
 parser.add_argument('--cpu', action='store_false', dest='gpu')
 args = parser.parse_args()
 
@@ -48,5 +48,8 @@ y = np.reshape(y, (args.num_rows * height, args.num_cols * width))
 img_array = y
 
 img = Image.fromarray(img_array, mode='L')
-img = img.resize((img_array.shape[1] * args.scale, img_array.shape[0] * args.scale), resample=Image.BILINEAR)
+img = img.resize((
+    int(img_array.shape[1] * args.scale),
+    int(img_array.shape[0] * args.scale)),
+    resample=Image.BILINEAR)
 img.save('manifold.png')
