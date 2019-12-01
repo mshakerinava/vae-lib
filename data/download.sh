@@ -17,3 +17,6 @@ wget --continue http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/train
 wget --continue http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-images-idx3-ubyte.gz
 wget --continue http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-labels-idx1-ubyte.gz
 cd ..
+
+# Frey Face (~1 MB)
+wget --continue https://cs.nyu.edu/~roweis/data/frey_rawface.mat

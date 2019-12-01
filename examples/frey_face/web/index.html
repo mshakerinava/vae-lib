@@ -1,0 +1,17 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="./index.css">
+    <script src="https://cdn.jsdelivr.net/npm/onnxjs/dist/onnx.min.js"></script>
+</head>
+<body>
+    <div id="container">
+        <h1>VAE <span style="font-size: 22px; font-style: italic;">on</span> Frey Face</h1>
+        z<sub>0</sub>: <input type="number" step="any" id="z0" value="0">
+        <input class="slider" id="slide0" type="range" min="-3" max="3" step="0.1" value="0"> <br/>
+        z<sub>1</sub>: <input type="number" step="any" id="z1" value="0">
+        <input class="slider" id="slide1" type="range" min="-3" max="3" step="0.1" value="0"> <br/>
+        <canvas id="canvas" width="20px" height="28px" style="width: 100px; height: 140px"></canvas>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
